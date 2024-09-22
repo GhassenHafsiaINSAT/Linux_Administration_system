@@ -31,16 +31,15 @@
 
 ## Searching for files and directories 
 - Before using locate you should update the database mlocate.db 
+
 - ```sh
   sudo updatedb 
   locate EXAMPLE.cpp
   /Path/To/Your/EXAMPLE.cpp
   ```
-
 - ```sh
   find /home/ghassen -name Example.cpp
   ```
-
 - Search for a workd in file use the command `grep`, it will only print out the line matching the search pattern
 ```sh
 grep main example.cpp
@@ -49,4 +48,14 @@ grep main example.cpp
 - When you want to print out the lines that does not contain the word, use the option `-v`
 
 ## IO redirection 
-  
+
+- To redirect standard output to a file instead of printing it on the screen, you can use `>` followed by the name of the file, it overrides then content of the file
+```sh
+echo $SHELL > shell.txt
+```
+
+- If you want to append stdout to an existing file, you can use `>>` followed by the name of the file 
+```sh
+echo $SHELL >> shell.txt
+```
+- In order to redirect just the error messages, you need to use the number 2 followed by `>`
