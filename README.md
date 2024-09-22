@@ -59,3 +59,10 @@ echo $SHELL > shell.txt
 echo $SHELL >> shell.txt
 ```
 - In order to redirect just the error messages, you need to use the number 2 followed by `>`
+
+## Network troubleshooting - DNS
+- First you check you network interface status, if it is UP or DOWN, by typing `ip link`
+- If it is down you can modify it by using ip link set dev interface_name up
+- secondly, check if you can resolve the host name to an ip address by typing `nslookup host_name` and make sure its resolving to a valid ip
+- Next, ping the remote server to see if you got a response, you can use `ping host_name` and check the packet loss.
+- If there is an issue when pinging the remote server, check the route status by typing `traceroute remote_server_address`
